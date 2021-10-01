@@ -1,5 +1,6 @@
 package com.example.day02.employee;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -27,6 +28,15 @@ public class EmployeeRepositoryTest {
 		assertTrue(result.isPresent());
 		assertEquals(1, result.get().getId());
 		assertEquals("test", result.get().getName());
+	}
+	
+	@Test
+	public void case02() {
+		//arrange
+		//act
+		Optional<Employee> result = em.findById(1);
+		//assert
+		assertFalse(result.isPresent());
 	}
 	
 }
