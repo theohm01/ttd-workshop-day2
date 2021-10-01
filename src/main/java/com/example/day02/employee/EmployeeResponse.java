@@ -1,8 +1,8 @@
 package com.example.day02.employee;
 
 public class EmployeeResponse {
-	public int id;
-	public String name;
+	private int id;
+	private String name;
 
 	
 	
